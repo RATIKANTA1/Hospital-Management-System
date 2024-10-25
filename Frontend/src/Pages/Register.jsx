@@ -75,6 +75,7 @@ const Register = () => {
               value={lastName}
               onChange={(e) => setLastName(e.target.value)}
             />
+            
           </div>
           <div>
             <input
