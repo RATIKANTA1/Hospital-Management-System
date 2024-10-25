@@ -11,7 +11,7 @@ const Register = () => {
   const [lastName, setLastName] = useState("");
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
-  const [nic, setNic] = useState("");
+  const [uidi, setUidi] = useState("");
   const [dob, setDob] = useState("");
   const [gender, setGender] = useState("");
   const [password, setPassword] = useState("");
@@ -95,7 +95,7 @@ const Register = () => {
               type="number"
               placeholder="UIDI"
               value={uidi}
-              onChange={(e) => setNic(e.target.value)}
+              onChange={(e) => setUidi(e.target.value)}
             />
             <input
               type={"date"}
