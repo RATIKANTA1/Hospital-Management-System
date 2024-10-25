@@ -75,7 +75,7 @@ const Register = () => {
               value={lastName}
               onChange={(e) => setLastName(e.target.value)}
             />
-            
+
           </div>
           <div>
             <input
@@ -94,7 +94,7 @@ const Register = () => {
           <div>
             <input
               type="number"
-              placeholder="UIDI"
+              placeholder="UIDI" // uidi add
               value={uidi}
               onChange={(e) => setUidi(e.target.value)}
             />
