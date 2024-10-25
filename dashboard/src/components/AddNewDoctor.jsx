@@ -11,7 +11,7 @@ const AddNewDoctor = () => {
   const [lastName, setLastName] = useState("");
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
-  const [nic, setNic] = useState("");
+  const [uidi, setUidi] = useState("");
   const [dob, setDob] = useState("");
   const [gender, setGender] = useState("");
   const [password, setPassword] = useState("");
@@ -58,7 +58,7 @@ const AddNewDoctor = () => {
       formData.append("doctorDepartment", doctorDepartment);
       formData.append("docAvatar", docAvatar);
       await axios
-        .post("http://localhost:4000/api/v1/user/doctor/addnew", formData, {
+        .post("https://hospital-management-system-lqvc.onrender.com/api/v1/user/doctor/addnew", formData, {
           withCredentials: true,
           headers: { "Content-Type": "multipart/form-data" },
         })
@@ -70,7 +70,7 @@ const AddNewDoctor = () => {
           setLastName("");
           setEmail("");
           setPhone("");
-          setNic("");
+          setUidi("");
           setDob("");
           setGender("");
           setPassword("");
@@ -127,8 +127,8 @@ const AddNewDoctor = () => {
               <input
                 type="number"
                 placeholder="UIDI"
-                value={nic}
-                onChange={(e) => setNic(e.target.value)}
+                value={uidi}
+                onChange={(e) => setUidi(e.target.value)}
               />
               <input
                 type={"date"}

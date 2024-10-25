@@ -4,6 +4,8 @@ import { GiHamburgerMenu } from "react-icons/gi";
 import axios from "axios";
 import { toast } from "react-toastify";
 import { Context } from "../main";
+import Login from "../Pages/Login";
+
 
 const Navbar = () => {
   const [show, setShow] = useState(false);
@@ -11,7 +13,7 @@ const Navbar = () => {
 
   const handleLogout = async () => {
     await axios
-      .get("https://hospital-management-system-tmwz.onrender.com/api/v1/user/patient/logout", {
+      .get("https://hospital-management-system-lqvc.onrender.com/api/v1/user/patient/logout", {
         withCredentials: true,
       })
       .then((res) => {
@@ -46,7 +48,12 @@ const Navbar = () => {
             <Link to={"/about"} onClick={() => setShow(!show)}>
               About Us
             </Link>
+            
+  
           </div>
+          <Link to={"http://localhost:5174"} onClick={() => setShow(!show)}  className="admin">
+              Admin
+            </Link>
           {isAuthenticated ? (
             <button className="logoutBtn btn" onClick={handleLogout}>
               LOGOUT

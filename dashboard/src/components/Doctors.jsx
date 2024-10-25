@@ -11,7 +11,7 @@ const Doctors = () => {
     const fetchDoctors = async () => {
       try {
         const { data } = await axios.get(
-          "http://localhost:4000/api/v1/user/doctors",
+          "https://hospital-management-system-lqvc.onrender.com/api/v1/user/doctors",
           { withCredentials: true }
         );
         setDoctors(data.doctors);
@@ -52,7 +52,7 @@ const Doctors = () => {
                     Department: <span>{element.doctorDepartment}</span>
                   </p>
                   <p>
-                    NIC: <span>{element.nic}</span>
+                    UIDI: <span>{element.uidi}</span>
                   </p>
                   <p>
                     Gender: <span>{element.gender}</span>

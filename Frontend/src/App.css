@@ -441,6 +441,15 @@ nav {
   padding-top: 20px !important;
   padding-bottom: 20px !important;
   z-index: 2;
+
+  .admin{
+     
+     padding:12px 20px;
+     background-color: rgb(90, 90, 189);
+      color: white;
+      text-decoration: none;
+      border-radius: 20px;
+  }
 }
 nav .logo {
   flex: 1;

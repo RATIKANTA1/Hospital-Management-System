@@ -11,7 +11,7 @@ const AddNewAdmin = () => {
   const [lastName, setLastName] = useState("");
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
-  const [nic, setNic] = useState("");
+  const [uidi, setUidi] = useState("");
   const [dob, setDob] = useState("");
   const [gender, setGender] = useState("");
   const [password, setPassword] = useState("");
@@ -23,7 +23,7 @@ const AddNewAdmin = () => {
     try {
       await axios
         .post(
-          "http://localhost:4000/api/v1/user/admin/addnew",
+          "https://hospital-management-system-lqvc.onrender.com/api/v1/user/admin/addnew",
           { firstName, lastName, email, phone, uidi, dob, gender, password },
           {
             withCredentials: true,
@@ -38,7 +38,7 @@ const AddNewAdmin = () => {
           setLastName("");
           setEmail("");
           setPhone("");
-          setNic("");
+          setUidi("");
           setDob("");
           setGender("");
           setPassword("");
@@ -89,9 +89,9 @@ const AddNewAdmin = () => {
           <div>
             <input
               type="number"
-              placeholder="NIC"
-              value={nic}
-              onChange={(e) => setNic(e.target.value)}
+              placeholder="UIDI"
+              value={uidi}
+              onChange={(e) => setUidi(e.target.value)}
             />
             <input
               type={"date"}
