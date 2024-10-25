@@ -23,8 +23,8 @@ const Register = () => {
     try {
       await axios
         .post(
-          "https://hospital-management-system-5-hwqd.onrender.com/api/v1/user/patient/register",
-          { firstName, lastName, email, phone, nic, dob, gender, password },
+          "https://hospital-management-system-tmwz.onrender.com/api/v1/user/patient/register",
+          { firstName, lastName, email, phone, uidi, dob, gender, password },
           {
             withCredentials: true,
             headers: { "Content-Type": "application/json" },
@@ -38,7 +38,7 @@ const Register = () => {
           setLastName("");
           setEmail("");
           setPhone("");
-          setNic("");
+          setUidi("");
           setDob("");
           setGender("");
           setPassword("");
