@@ -25,11 +25,11 @@ const userSchema = new mongoose.Schema({
     minLength: [10, "Phone Number Must Contain Exact 10 Digits!"],
     maxLength: [10, "Phone Number Must Contain Exact 10 Digits!"],
   },
-  nic: {
+  uidi: {
     type: String,
     required: [true, "UIDI Is Required!"],
-    minLength: [12, "UIDI Must Contain Only 13 Digits!"],
-    maxLength: [12, "UIDi Must Contain Only 13 Digits!"],
+    minLength: [12, "UIDI Must Contain Only 12 Digits!"],
+    maxLength: [12, "UIDi Must Contain Only 12 Digits!"],
   },
   dob: {
     type: Date,
