@@ -5,14 +5,14 @@ import { generateToken } from "../utils/jwtToken.js";
 import cloudinary from "cloudinary";
 
 export const patientRegister = catchAsyncErrors(async (req, res, next) => {
-  const { firstName, lastName, email, dob, phone, nic, gender, password } =
+  const { firstName, lastName, email, dob, phone, uidi, gender, password } =
     req.body;
   if (
     !firstName ||
     !lastName ||
     !email ||
     !phone ||
-    !nic ||
+    !uidi ||
     !dob ||
     !gender ||
     !password
@@ -30,7 +30,7 @@ export const patientRegister = catchAsyncErrors(async (req, res, next) => {
     lastName,
     email,
     phone,
-    nic,
+    uidi,
     dob,
     gender,
     password,
@@ -65,14 +65,14 @@ export const login = catchAsyncErrors(async (req, res, next) => {
 });
 
 export const addNewAdmin = catchAsyncErrors(async (req, res, next) => {
-  const { firstName, lastName, email, phone, nic, dob, gender, password } =
+  const { firstName, lastName, email, phone, uidi, dob, gender, password } =
     req.body;
   if (
     !firstName ||
     !lastName ||
     !email ||
     !phone ||
-    !nic ||
+    !uidi ||
     !dob ||
     !gender ||
     !password
@@ -90,7 +90,7 @@ export const addNewAdmin = catchAsyncErrors(async (req, res, next) => {
     lastName,
     email,
     phone,
-    nic,
+    uidi,
     dob,
     gender,
     password,
@@ -117,7 +117,7 @@ export const addNewDoctor = catchAsyncErrors(async (req, res, next) => {
     lastName,
     email,
     phone,
-    nic,
+    uidi,
     dob,
     gender,
     password,
@@ -128,7 +128,7 @@ export const addNewDoctor = catchAsyncErrors(async (req, res, next) => {
     !lastName ||
     !email ||
     !phone ||
-    !nic ||
+    !uidi ||
     !dob ||
     !gender ||
     !password ||
@@ -160,7 +160,7 @@ export const addNewDoctor = catchAsyncErrors(async (req, res, next) => {
     lastName,
     email,
     phone,
-    nic,
+    uidi,
     dob,
     gender,
     password,
