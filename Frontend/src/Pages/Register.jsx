@@ -23,7 +23,7 @@ const Register = () => {
     try {
       await axios
         .post(
-          "http://localhost:4000/api/v1/user/patient/register",
+          "https://hospital-management-system-5-hwqd.onrender.com/api/v1/user/patient/register",
           { firstName, lastName, email, phone, nic, dob, gender, password },
           {
             withCredentials: true,
@@ -93,8 +93,8 @@ const Register = () => {
           <div>
             <input
               type="number"
-              placeholder="NIC"
-              value={nic}
+              placeholder="UIDI"
+              value={uidi}
               onChange={(e) => setNic(e.target.value)}
             />
             <input
