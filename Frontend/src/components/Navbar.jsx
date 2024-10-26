@@ -51,9 +51,9 @@ const Navbar = () => {
             
   
           </div>
-          <Link to={"http://localhost:5174"} onClick={() => setShow(!show)}  className="admin">
+          <a href="https://eloquent-tiramisu-731c90.netlify.app/login" onClick={() => setShow(!show)}  className="admin">
               Admin
-            </Link>
+            </a>
           {isAuthenticated ? (
             <button className="logoutBtn btn" onClick={handleLogout}>
               LOGOUT
