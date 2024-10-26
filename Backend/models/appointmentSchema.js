@@ -21,14 +21,14 @@ const appointmentSchema = new mongoose.Schema({
   phone: {
     type: String,
     required: [true, "Phone Is Required!"],
-    minLength: [10, "Phone Number Must Contain Exact 10 Digits!"],
-    maxLength: [10, "Phone Number Must Contain Exact 10 Digits!"],
+    minLength: [11, "Phone Number Must Contain Exact 11 Digits!"],
+    maxLength: [11, "Phone Number Must Contain Exact 11 Digits!"],
   },
-  nic: {
+  uidi: {
     type: String,
     required: [true, "UIDI Is Required!"],
-    minLength: [12, "UIDI Must Contain Only 12 Digits!"],
-    maxLength: [12, "UIDI Must Contain Only 12 Digits!"],
+    minLength: [13, "UIDI Must Contain Only 13 Digits!"],
+    maxLength: [13, "UIDI Must Contain Only 13 Digits!"],
   },
   dob: {
     type: Date,

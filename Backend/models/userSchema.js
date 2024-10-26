@@ -1,6 +1,6 @@
 import mongoose from "mongoose";
 import validator from "validator";
-import bcrypt from "bcryptjs";
+import bcrypt from "bcrypt";
 import jwt from "jsonwebtoken";
 
 const userSchema = new mongoose.Schema({
@@ -28,8 +28,8 @@ const userSchema = new mongoose.Schema({
   uidi: {
     type: String,
     required: [true, "UIDI Is Required!"],
-    minLength: [12, "UIDI Must Contain Only 12 Digits!"],
-    maxLength: [12, "UIDi Must Contain Only 12 Digits!"],
+    minLength: [12, "UIDI Must Contain Only 13 Digits!"],
+    maxLength: [12, "UIDI Must Contain Only 13 Digits!"],
   },
   dob: {
     type: Date,
