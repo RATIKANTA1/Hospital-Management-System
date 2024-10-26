@@ -29,7 +29,7 @@ const userSchema = new mongoose.Schema({
     type: String,
     required: [true, "UIDI Is Required!"],
     minLength: [12, "UIDI Must Contain Only 12 Digits!"],
-    maxLength: [12, "UIDI Must Contain Only 12 Digits!"],
+    maxLength: [12, "UIDi Must Contain Only 12 Digits!"],
   },
   dob: {
     type: Date,

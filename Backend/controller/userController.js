@@ -1,11 +1,11 @@
 import { catchAsyncErrors } from "../middlewares/catchAsyncErrors.js";
 import { User } from "../models/userSchema.js";
-import ErrorHandler from "../middlewares/error.js";
+import ErrorHandler from "../middlewares/errorMiddleware.js";
 import { generateToken } from "../utils/jwtToken.js";
 import cloudinary from "cloudinary";
 
 export const patientRegister = catchAsyncErrors(async (req, res, next) => {
-  const { firstName, lastName, email, phone, uidi, dob, gender, password } =
+  const { firstName, lastName, email, dob, phone, uidi, gender, password } =
     req.body;
   if (
     !firstName ||
