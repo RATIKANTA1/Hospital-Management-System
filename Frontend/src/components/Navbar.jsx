@@ -51,7 +51,7 @@ const Navbar = () => {
             
   
           </div>
-          <a href="https://eloquent-tiramisu-731c90.netlify.app/login" onClick={() => setShow(!show)}  className="admin">
+          <a target="_blank" href="https://eloquent-tiramisu-731c90.netlify.app" onClick={() => setShow(!show)}  className="admin">
               Admin
             </a>
           {isAuthenticated ? (

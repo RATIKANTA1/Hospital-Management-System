@@ -3,7 +3,7 @@ import { Navigate, useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 import { Context } from "../main";
 import axios from "axios";
-
+import Dashboard from "./Dashboard";
 const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
