@@ -5,20 +5,20 @@ import {
   postAppointment,
   updateAppointmentStatus,
 } from "../controller/appointmentController.js";
-// import {
-//   isAdminAuthenticated,
-//   isPatientAuthenticated,
-// } from "../middlewares/auth.js";
+import {
+  isAdminAuthenticated,
+  isPatientAuthenticated,
+} from "../middlewares/auth.js";
 
 const router = express.Router();
 
-router.post("/post", postAppointment);
-// router.post("/post", isPatientAuthenticated, postAppointment);
-router.get("/getall", getAllAppointments);
-// router.get("/getall", isAdminAuthenticated, getAllAppointments);
-router.put("/update/:id", updateAppointmentStatus);
-// router.put("/update/:id", isAdminAuthenticated, updateAppointmentStatus);
-router.delete("/delete/:id", deleteAppointment);
-// router.delete("/delete/:id", isAdminAuthenticated, deleteAppointment);
+
+router.post("/post", isPatientAuthenticated, postAppointment);
+
+router.get("/getall", isAdminAuthenticated, getAllAppointments);
+
+router.put("/update/:id", isAdminAuthenticated, updateAppointmentStatus);
+
+router.delete("/delete/:id", isAdminAuthenticated, deleteAppointment);
 
 export default router;
